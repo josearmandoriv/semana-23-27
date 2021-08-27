@@ -1,0 +1,45 @@
+#include <stdio.h>
+ int main(void){
+ 	int MXN; 
+ 	float conversion; 
+ 	int c; 
+ 	
+ 	printf("conversion de moneda \n");
+ 	printf("indica el valor en pesos: \n");
+ 	scanf("%d", &MXN);
+
+printf("indica la operación que quiere realizar\n 1)dolares\n 2)euros\n 3)libras\n 4)yenes\n 5)soles\n 6)bolivares\n");
+scanf("%d",&c);
+conversion= 0; 
+switch(c)
+ {
+ case 1:
+conversion=MXN*0.049 /*Dolares*/;
+break;
+
+case 2:
+conversion=MXN*0.042 /*euros*/;
+break;
+
+case 3:
+conversion=MXN*0.036 /*libras*/; 
+break;
+
+case 4:
+conversion=MXN*5.41 /*yenes*/;
+break;
+
+case 5:
+conversion=MXN*.20 /*soles*/;
+break;
+
+case 6:
+conversion=MXN*200491.93 /*bolivares*/;
+break;
+
+default:
+printf("opcion invalida");
+}
+printf("la conversion de %d pesos, en la moneda seleccionada es: %f",MXN,conversion);
+return 0;
+}
